@@ -14,3 +14,21 @@ class Question extends Questions {
 		System.out.println(description);
 	}
 }
+
+class Paper extends Questions {
+	private ArrayList<Questions> list ;
+	Paper(){
+		 list = new ArrayList<Questions>();
+	}
+	public void add( Questions questions ) {
+		list.add(questions);
+	}
+	
+	public void print() {
+		Iterator<Questions> iterator = list.iterator();
+		while( iterator.hasNext() ){
+			Questions c = iterator.next();
+			c.print();
+		}
+	}
+}
