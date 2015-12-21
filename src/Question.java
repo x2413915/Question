@@ -32,3 +32,11 @@ class Paper extends Questions {
 		}
 	}
 }
+
+class Main {
+	void m1( Questions[] c ){
+		for( Questions cc : c){
+			cc.print();
+		}
+	}
+}
